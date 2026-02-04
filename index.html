@@ -370,6 +370,88 @@
             .nav-links { display: none; } 
             .section-header h2::after { display: none; }
         }
+
+        /* --- AI NOTIFICATION CARD --- */
+        .ai-notice {
+            background: linear-gradient(180deg, rgba(0, 218, 197, 0.05) 0%, rgba(10, 10, 10, 1) 100%);
+            border: 1px solid var(--accent-color);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 30px -10px rgba(0, 218, 197, 0.1);
+        }
+
+        /* The moving "Scanner" line */
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent-color);
+            opacity: 0.5;
+            box-shadow: 0 0 10px var(--accent-color);
+            animation: scan 3s linear infinite;
+        }
+
+        @keyframes scan {
+            0% { top: 0; opacity: 0; }
+            50% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        .ai-header {
+            font-family: var(--font-code);
+            color: var(--accent-color);
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(0, 218, 197, 0.1);
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .ai-notice h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .ai-notice p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Fake Progress Bar */
+        .progress-container {
+            width: 60%;
+            height: 4px;
+            background: var(--bg-surface-hover);
+            margin: 0 auto;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 40%; /* Initial width */
+            background: var(--accent-color);
+            animation: loading 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes loading {
+            0% { width: 30%; opacity: 0.5; }
+            100% { width: 70%; opacity: 1; }
+        }
+        
+        /* Blinking Dot Animation */
+        .blink { animation: blink 1s infinite; }
     </style>
 </head>
 <body>
@@ -601,6 +683,31 @@
                     <div class="contact-value">ClicksBySagnik</div>
                 </a>
 
+            </div>
+        </section>
+
+        <section style="padding: 80px 0 40px;">
+            <div class="ai-notice hidden">
+                <div class="scan-line"></div> <div class="ai-header">
+                    <span class="blink">●</span> SYSTEM_UPDATE_PENDING
+                </div>
+                
+                <h2>Agentic AI Transformation</h2>
+                
+                <p>
+                    This static portfolio is temporary. I am currently architecting <b>Version 2.0</b>: 
+                    a fully autonomous website driven by <b>Multi-Agent Systems</b>. 
+                    <br><br>
+                    Soon, you won't just <i>read</i> this portfolio—you will <i>feel</i> it.
+                </p>
+
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                
+                <p style="font-family: var(--font-code); font-size: 0.8rem; color: var(--accent-color); margin-top: 10px;">
+                    > Status: Building Agents...
+                </p>
             </div>
         </section>
         </section>
