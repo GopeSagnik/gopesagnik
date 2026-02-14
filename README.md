@@ -69,6 +69,7 @@
 
 | **Project** | **Description** | **Tech** |
 | :--- | :--- | :--- |
+| **🧠 [Samvidhan Shathi](https://github.com/GopeSagnik/Samvidhan_Shathi?tab=readme-ov-file#-samvidhan-sathi-ai-legal-aid-companion)** | AI Legal Aid Companion | `Python` `RAG` `LangGraph` |
 | **🧠 [Volume Control AI](https://github.com/GopeSagnik/Volume-Control)** | A Computer Vision system to control PC audio via hand gestures. | `Python` `OpenCV` `MediaPipe` |
 | **📊 [Perfomore](https://perfomore-c0bbb.web.app/)** | Automated daily task tracker and EOD report generator for teams. | `JS` `Firebase` `Analytics` |
 | **⏳ [EffortWall](https://gopesagnik.github.io/effortwall/)** | Smart dashboard for resource bandwidth and holiday management. | `Appwrite` `HTML` `CSS` |
