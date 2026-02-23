@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        /* CORE VARIABLES */
+        /* CORE VARIABLES (Matched to your theme) */
         :root {
             --bg-deep: #0a0a0a;
             --bg-surface: #171717;
@@ -124,65 +124,6 @@
             .contact-container { padding: 30px 20px; }
             .back-link { top: 20px; left: 20px; }
         }
-
-        /* --- SUCCESS POPUP STYLES --- */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .popup-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .popup-box {
-            background: var(--bg-surface);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--accent-color);
-            text-align: center;
-            transform: translateY(30px);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 40px rgba(0, 218, 197, 0.2);
-            max-width: 400px;
-            width: 90%;
-        }
-
-        .popup-overlay.active .popup-box {
-            transform: translateY(0);
-        }
-
-        .popup-icon {
-            width: 60px;
-            height: 60px;
-            color: var(--accent-color);
-            margin-bottom: 20px;
-        }
-
-        .popup-box h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: var(--text-primary);
-        }
-
-        .popup-box p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-family: var(--font-code);
-        }
     </style>
 </head>
 <body>
@@ -195,7 +136,7 @@
             <p>Send a message directly to my inbox.</p>
         </div>
 
-        <form id="contactForm">
+        <form action="https://api.web3forms.com/submit" method="POST">
             
             <input type="hidden" name="access_key" value="b58b0476-32bd-433e-9858-4bb3e8a6c0d3">
             
@@ -221,71 +162,11 @@
                 <textarea id="message" name="Message" required placeholder="Hello Sagnik, I would like to discuss..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn" id="submitBtn">Execute Send</button>
+            <input type="hidden" name="redirect" value="https://gopesagnik.in">
+
+            <button type="submit" class="submit-btn">Execute Send</button>
         </form>
     </div>
-
-    <div class="popup-overlay" id="successPopup">
-        <div class="popup-box">
-            <svg class="popup-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-            </svg>
-            <h2>Transmission Successful</h2>
-            <p>> Redirecting to home node...</p>
-        </div>
-    </div>
-
-    <script>
-        const form = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const popup = document.getElementById('successPopup');
-
-        form.addEventListener('submit', function(e) {
-            // Stop the default HTML redirect
-            e.preventDefault(); 
-            
-            // Change button state to show loading
-            const originalBtnText = submitBtn.innerText;
-            submitBtn.innerText = "Processing...";
-            submitBtn.style.opacity = "0.7";
-            submitBtn.style.pointerEvents = "none";
-
-            // Gather form data
-            const formData = new FormData(form);
-
-            // Send the data via Web3Forms API
-            fetch('https://api.web3forms.com/submit', {
-                method: 'POST',
-                body: formData
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.status == 200) {
-                    // Show popup
-                    popup.classList.add('active');
-                    form.reset();
-                    
-                    // Wait 2.5 seconds, then redirect to home
-                    setTimeout(() => {
-                        window.location.href = '../'; 
-                    }, 2500);
-                } else {
-                    console.log(response);
-                    alert("System Error: " + json.message);
-                    submitBtn.innerText = originalBtnText;
-                    submitBtn.style.opacity = "1";
-                    submitBtn.style.pointerEvents = "auto";
-                }
-            })
-            .catch((error) => {
-                console.log(error);
-                alert("Critical failure. Please check your connection.");
-                submitBtn.innerText = originalBtnText;
-                submitBtn.style.opacity = "1";
-                submitBtn.style.pointerEvents = "auto";
-            });
-        });
-    </script>
 
 </body>
 </html>
