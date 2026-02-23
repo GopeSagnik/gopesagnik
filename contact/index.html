@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sagnik Gope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CORE VARIABLES (Matched to your theme) */
+        :root {
+            --bg-deep: #0a0a0a;
+            --bg-surface: #171717;
+            --bg-surface-hover: #222222; 
+            --text-primary: #ededed;
+            --text-secondary: #a1a1aa;
+            --accent-color: #00dac5;
+            --accent-dim: rgba(0, 218, 197, 0.1);
+            --border-color: #333333;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* BACK BUTTON */
+        .back-link {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            color: var(--text-secondary);
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--accent-color); }
+        .back-link span { margin-right: 8px; font-size: 1.2rem; }
+
+        /* FORM CONTAINER */
+        .contact-container {
+            background: var(--bg-surface);
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .contact-header { margin-bottom: 30px; text-align: center; }
+        .contact-header h1 { font-size: 2rem; margin-bottom: 10px; }
+        .contact-header p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* FORM ELEMENTS */
+        .form-group { margin-bottom: 20px; }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-dim);
+        }
+
+        textarea { resize: vertical; min-height: 150px; }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #009e8f 100%);
+            color: var(--bg-deep);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-code);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 218, 197, 0.4);
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container { padding: 30px 20px; }
+            .back-link { top: 20px; left: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../" class="back-link"><span>←</span> cd ../home</a>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Initialize Connection</h1>
+            <p>Send a message directly to my inbox.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            
+            <input type="hidden" name="access_key" value="b58b0476-32bd-433e-9858-4bb3e8a6c0d3">
+            
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div class="form-group">
+                <label for="name">> Name</label>
+                <input type="text" id="name" name="Name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">> Contact Details (Email or Phone)</label>
+                <input type="text" id="contact" name="Contact Details" required placeholder="john@example.com or +1 234 567 8900">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">> Subject</label>
+                <input type="text" id="subject" name="Subject" required placeholder="Job Opportunity / Project Inquiry">
+            </div>
+
+            <div class="form-group">
+                <label for="message">> Description</label>
+                <textarea id="message" name="Message" required placeholder="Hello Sagnik, I would like to discuss..."></textarea>
+            </div>
+
+            <input type="hidden" name="redirect" value="https://gopesagnik.in">
+
+            <button type="submit" class="submit-btn">Execute Send</button>
+        </form>
+    </div>
+
+</body>
+</html>
