@@ -18,16 +18,12 @@
 
   <br>
 
-  <a href="https://gopesagnik.in" target="_blank">
-    <img src="https://img.shields.io/badge/View_Portfolio-0a0a0a?style=for-the-badge&logo=googlechrome&logoColor=00dac5" height="35" />
+  <a href="https://gopesagnik.in">
+    <img src="https://img.shields.io/badge/View_Portfolio-00dac5?style=for-the-badge&logo=googlechrome&logoColor=black" height="35" />
   </a>
   &nbsp;&nbsp;
-  <a href="https://www.linkedin.com/in/gopesagnik/" target="_blank">
+  <a href="https://www.linkedin.com/in/gopesagnik/">
     <img src="https://img.shields.io/badge/LinkedIn-0a0a0a?style=for-the-badge&logo=linkedin&logoColor=00dac5" height="35" />
-  </a>
-  &nbsp;&nbsp;
-  <a href="https://gopesagnik.in/#contact" target="_blank">
-    <img src="https://img.shields.io/badge/Contact_Me-00dac5?style=for-the-badge&logo=gmail&logoColor=black" height="35" />
   </a>
 
 </div>
