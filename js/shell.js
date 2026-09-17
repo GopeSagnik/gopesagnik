@@ -31,10 +31,24 @@ class LoaderShell {
                     </div>
                 </div>
 
-                <!-- Per-game instructions, styled as a little sticky note -->
-                <div class="relative mt-2 mb-1">
-                    <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary shadow z-10"></span>
-                    <p id="game-note" class="max-w-xs -rotate-1 bg-secondary/70 border border-secondary text-heading font-bodyText text-xs text-center leading-snug px-4 py-2.5 rounded-lg shadow-md"></p>
+               <!-- Per-game instructions, styled as stacked sticky notes -->
+                <!-- Per-game instructions, styled as stacked sticky notes -->
+                <div class="relative mt-2 mb-6 flex flex-col items-center justify-center w-full gap-2.5">
+                    
+                    <!-- Primary Note (Left tilt) -->
+                    <div class="relative z-10 w-full max-w-xs flex justify-center">
+                        <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary shadow z-20"></span>
+                        <p id="game-note" class="w-full max-w-[280px] -rotate-1 bg-secondary/95 border border-secondary text-heading font-bodyText text-xs text-center leading-snug px-4 py-2.5 rounded-lg shadow-md backdrop-blur-sm"></p>
+                    </div>
+
+                    <!-- Secondary Note (Right tilt) -->
+                    <div class="relative z-0 w-full max-w-xs flex justify-center">
+                        <span class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary/70 shadow z-10"></span>
+                        <p class="w-full max-w-[260px] rotate-2 bg-warm/95 border border-secondary/50 text-body font-mono text-[10px] sm:text-xs text-center leading-snug px-4 py-2 rounded-lg shadow-sm">
+                            Play the game, Don't be bore... Till the Site Roar🐯!
+                        </p>
+                    </div>
+
                 </div>
 
                 <!-- Ready CTA (hidden initially) — main call to action once it appears -->
@@ -42,7 +56,7 @@ class LoaderShell {
                     <span class="relative flex">
                         <span class="absolute inline-flex h-full w-full rounded-full bg-primary opacity-60 animate-ping"></span>
                         <span class="relative inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary hover:bg-heading text-warm font-sans font-bold text-base shadow-2xl shadow-primary/40 ring-4 ring-primary/20 transform transition active:scale-95">
-                            <span>⚡ Portfolio Ready</span>
+                            <span>⚡Yayyy! Portfolio Ready</span>
                             <span class="bg-white/20 text-xs px-2.5 py-1 rounded-full">View Now</span>
                         </span>
                     </span>

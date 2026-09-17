@@ -48,7 +48,7 @@ export class DropTheBugGame {
     queueInput(dir) {
         if (this.isGameOver || !this.canvas.width) return;
 
-        const moveAmount = this.canvas.width / 4; // Move 25% of screen per tap
+        const moveAmount = this.canvas.width / 8; // Move 25% of screen per tap
         
         if (dir === 'LEFT') {
             this.bucket.targetX -= moveAmount;
