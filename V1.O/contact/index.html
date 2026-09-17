@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Sagnik Gope</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        /* CORE VARIABLES */
+        :root {
+            --bg-deep: #0a0a0a;
+            --bg-surface: #171717;
+            --bg-surface-hover: #222222; 
+            --text-primary: #ededed;
+            --text-secondary: #a1a1aa;
+            --accent-color: #00dac5;
+            --accent-dim: rgba(0, 218, 197, 0.1);
+            --border-color: #333333;
+            --font-body: 'Inter', sans-serif;
+            --font-code: 'Fira Code', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* BACK BUTTON */
+        .back-link {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            color: var(--text-secondary);
+            font-family: var(--font-code);
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--accent-color); }
+        .back-link span { margin-right: 8px; font-size: 1.2rem; }
+
+        /* FORM CONTAINER */
+        .contact-container {
+            background: var(--bg-surface);
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            width: 100%;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .contact-header { margin-bottom: 30px; text-align: center; }
+        .contact-header h1 { font-size: 2rem; margin-bottom: 10px; }
+        .contact-header p { color: var(--text-secondary); font-size: 0.95rem; }
+
+        /* FORM ELEMENTS */
+        .form-group { margin-bottom: 20px; }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            color: var(--accent-color);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-deep);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            color: var(--text-primary);
+            font-family: var(--font-body);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px var(--accent-dim);
+        }
+
+        textarea { resize: vertical; min-height: 150px; }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #009e8f 100%);
+            color: var(--bg-deep);
+            border: none;
+            border-radius: 6px;
+            font-family: var(--font-code);
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 218, 197, 0.4);
+            color: #000;
+        }
+
+        @media (max-width: 600px) {
+            .contact-container { padding: 30px 20px; }
+            .back-link { top: 20px; left: 20px; }
+        }
+
+        /* --- SUCCESS POPUP STYLES --- */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .popup-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .popup-box {
+            background: var(--bg-surface);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--accent-color);
+            text-align: center;
+            transform: translateY(30px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 40px rgba(0, 218, 197, 0.2);
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .popup-overlay.active .popup-box {
+            transform: translateY(0);
+        }
+
+        .popup-icon {
+            width: 60px;
+            height: 60px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        .popup-box h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+
+        .popup-box p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-family: var(--font-code);
+        }
+    </style>
+</head>
+<body>
+
+    <a href="../" class="back-link"><span>←</span> cd ../home</a>
+
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Initialize Connection</h1>
+            <p>Send a message directly to my inbox.</p>
+        </div>
+
+        <form id="contactForm">
+            
+            <input type="hidden" name="access_key" value="b58b0476-32bd-433e-9858-4bb3e8a6c0d3">
+            
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <div class="form-group">
+                <label for="name">> Name</label>
+                <input type="text" id="name" name="Name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group">
+                <label for="contact">> Contact Details (Email or Phone)</label>
+                <input type="text" id="contact" name="Contact Details" required placeholder="john@example.com or +1 234 567 8900">
+            </div>
+
+            <div class="form-group">
+                <label for="subject">> Subject</label>
+                <input type="text" id="subject" name="Subject" required placeholder="Job Opportunity / Project Inquiry">
+            </div>
+
+            <div class="form-group">
+                <label for="message">> Description</label>
+                <textarea id="message" name="Message" required placeholder="Hello Sagnik, I would like to discuss..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">Execute Send</button>
+        </form>
+    </div>
+
+    <div class="popup-overlay" id="successPopup">
+        <div class="popup-box">
+            <svg class="popup-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <h2>Transmission Successful</h2>
+            <p>> Redirecting to home node...</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const popup = document.getElementById('successPopup');
+
+        form.addEventListener('submit', function(e) {
+            // Stop the default HTML redirect
+            e.preventDefault(); 
+            
+            // Change button state to show loading
+            const originalBtnText = submitBtn.innerText;
+            submitBtn.innerText = "Processing...";
+            submitBtn.style.opacity = "0.7";
+            submitBtn.style.pointerEvents = "none";
+
+            // Gather form data
+            const formData = new FormData(form);
+
+            // Send the data via Web3Forms API
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    // Show popup
+                    popup.classList.add('active');
+                    form.reset();
+                    
+                    // Wait 2.5 seconds, then redirect to home
+                    setTimeout(() => {
+                        window.location.href = '../'; 
+                    }, 2500);
+                } else {
+                    console.log(response);
+                    alert("System Error: " + json.message);
+                    submitBtn.innerText = originalBtnText;
+                    submitBtn.style.opacity = "1";
+                    submitBtn.style.pointerEvents = "auto";
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                alert("Critical failure. Please check your connection.");
+                submitBtn.innerText = originalBtnText;
+                submitBtn.style.opacity = "1";
+                submitBtn.style.pointerEvents = "auto";
+            });
+        });
+    </script>
+
+</body>
+</html>

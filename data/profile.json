@@ -1,0 +1,155 @@
+{
+  "personal_info": {
+    "name": "Sagnik Gope",
+    "title": "Software Engineer | Agentic AI, D365 ERP & Salesforce Commerce Cloud",
+    "tagline": "Building intelligent, scalable, and intent-driven digital architectures.",
+    "email": "gopesagnik@gmail.com",
+    "address": "Madhyamgram, Kolkata, West Bengal, India",
+    "links": {
+      "website": "https://gopesagnik.in/",
+      "github": "https://github.com/GopeSagnik",
+      "linkedin": "https://www.linkedin.com/in/gopesagnik/",
+      "contact": "https://gopesagnik.in/contact/",
+      "photography_portfolio": "https://gopesagnik.github.io/clicksbysagnik/"
+    }
+  },
+  "data_last_updated": "August 2026",
+  "summary": "Software Engineer specializing in Agentic AI workflows, enterprise ERP systems (D365), and scalable e-commerce architectures (Salesforce Commerce Cloud). I focus on building low-latency, generative applications that dynamically adapt to user intent rather than relying on static interfaces.",
+  "skills": {
+    "ai_and_agents": [
+      "Agentic Workflows",
+      "LLM Integration",
+      "Prompt Engineering",
+      "Retrieval-Augmented Generation (RAG)",
+      "Langchain",
+      "Langgraph",
+      "Local LLMs - Ollama"
+    ],
+    "enterprise_platforms": [
+      "Microsoft Dynamics 365 ERP",
+      "Salesforce Commerce Cloud (SFCC)",
+      "Power BI",
+      "Power Platforms"
+    ],
+    "backend_and_cloud": [
+      "Python",
+      "FAST API",
+      "git",
+      "RESTful APIs"
+    ],
+    "data": [
+      "SQL",
+      "PostgreSQL",
+      "SQLITE3",
+      "DataBase Schema Design"
+    ],
+    "frontend": [
+      "HTML",
+      "CSS",
+      "Vibe Coding"
+    ],
+    "applications": [
+      "Excel",
+      "Adobe Photoshop",
+      "PowerPoint"
+    ]
+  },
+  "experience": [
+    {
+      "company": "Cognizant",
+      "role": "TechOps Engineer",
+      "duration": "December 2023 - Present",
+      "highlights": [
+        "Working on to built AI Agent which helps on JIRA ticket triaging, resolving in first pace",
+        "Built Multiple tools and advanced excel sheets to smooth project processing. tools like JSON de-deplicator, Team Effort Tracker, Team Status update board",
+        "Managed Salesforce Commerce Cloud (SFCC) core functions, including Data Replication, Client User Permissions, and Order Management, ensuring smooth integration and stable order fulfilment flow.",
+        "Managed and fixed several 20+ Consumer account per week, order, Loyalty issues over API integration failures",
+        "Served as a key functional analyst supporting mission-critical D365 Commerce modules (Store Commerce, POS Systems, Retail HQ) across a client network of 200+ retail locations.",
+        "Configured and deployed 15+ stores within the training environment for large-scale user adoption and testing.",
+        "Consistently resolved over 50+ high-priority Start-of-Day (SOD) and End-of-Day (EOD) operational issues, safeguarding daily revenue cycles.",
+        "Maintained processes within Supply Chain Management (SCM), ensuring system stability.",
+        "Managed and resolved an average of 20+ customer and loyalty program issues per week, ensuring data integrity and contributing to smooth Customer Relationship Management (CRM)."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Technology",
+      "stream": "Computer Science & Engineering",
+      "institution": "Guru Nanak Institute of Technology",
+      "year": "Passout-2023",
+      "score": "8.97",
+      "score_measuring_unit": "DGPA"
+    },
+    {
+      "degree": "Higher Secondary (XII) Board Exam (Computer Science Stream)",
+      "stream": "Computer Science",
+      "institution": "Barasat P.C.S. Govt. High School",
+      "year": "2019",
+      "score": "66.8",
+      "score_measuring_unit": "Percentage"
+    },
+    {
+      "degree": "Secondary (X) Board Exam",
+      "stream": "General",
+      "institution": "Barasat P.C.S. Govt. High School",
+      "year": "2017",
+      "score": "84.28",
+      "score_measuring_unit": "Percentage"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Generative Portfolio",
+      "description": "An intent-driven generative web portfolio. Uses users intent to dynamically generate custom UIs via client-side iframe injection.",
+      "tech_stack": ["Python", "Groq API", "Vanilla JS", "Tailwind CSS"],
+      "timeStamp":"October 2026",
+      "url": "https://gopesagnik.in/"
+
+    },
+    {
+      "name": "Samvidhan Shathi",
+      "description": "A LangGraph-powered AI agent with RAG (backed with Internet Fallback) , infused with the Constitution of India with real-time search to simplify legal access.",
+      "tech_stack": ["Python", "Langgraph", "RAG"],
+      "timeStamp":"March 2026",
+      "url": "https://github.com/GopeSagnik/Samvidhan_Shathi"
+    },
+    {
+      "name": "Perfomore",
+      "description": "A productivity utility designed to streamline daily work tracking and simplify status reporting for the team",
+      "tech_stack": ["HTML", "CSS", "FireBase"],
+      "timeStamp":"November 2025",
+      "url": "https://perfomore-c0bbb.web.app/"
+    },
+    {
+      "name": "Effortwall",
+      "description": "Optimizes resource management by tracking time and holidays to generate actionable efficiency data.",
+      "tech_stack": ["HTML", "CSS", "Appwrite"],
+      "timeStamp":"December 2025",
+      "url": "https://gopesagnik.github.io/effortwall/"
+    },
+    {
+      "name": "Volume-Controller using Hand Gesture",
+      "description": "An ML system to control your system volume using hand gesture",
+      "tech_stack": ["Python", "MediaPipe", "OpenCV"],
+      "timeStamp":"July 2022",
+      "url": "https://github.com/GopeSagnik/Volume-Control"
+    }
+
+  ],
+  "certifications": [
+    {
+      "code": "PL900",
+      "name":"Power Platform Fundamentals",
+      "Skill_cover":"Power BI, Power Platforms",
+      "platform": "Microsoft",
+      "timeStamp":"July 2024",
+      "url": "https://learn.microsoft.com/api/credentials/share/en-us/GopeSagnik/40338C0ADB359EA0?sharingId=915685CE1CFCF48B"
+    }    
+  ],
+  "hobbies": [
+    "Photography",
+    "Exploring New Techs",
+    "Bike Riding"
+  ]
+}

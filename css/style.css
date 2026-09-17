@@ -1,0 +1,61 @@
+/* Custom variables reflecting the requested palette */
+:root {
+    --color-warm: #FCFAF8;
+    --color-primary: #D97A35;
+    --color-secondary: #F3C9A3;
+    --color-heading: #2A404D;
+    --color-body: #485F6B;
+    --color-charcoal: #333333;
+}
+
+/* Sketchy Button Effect for "Get In Touch" */
+.sketchy-btn {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.sketchy-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px 12px 10px 6px / 10px 6px 12px 8px; /* Irregular border for hand-drawn look */
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.sketchy-btn:hover::before {
+    border-radius: 6px 10px 8px 12px / 12px 8px 10px 6px; /* Shifts on hover */
+    background-color: var(--color-secondary);
+    opacity: 0.3;
+}
+
+/* Base style for sketchy SVG lines */
+.sketchy-line {
+    stroke-dasharray: 10 5; /* Makes the stroke look irregular */
+}
+
+/* General reset for the iframe when active */
+iframe {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Loader D-pad: touch devices only — desktop/mouse users get keyboard arrows
+   instead, so the pad would just be dead weight on screen for them. */
+.loader-dpad {
+    display: none;
+}
+
+@media (pointer: coarse) {
+    .loader-dpad {
+        display: grid;
+    }
+}
