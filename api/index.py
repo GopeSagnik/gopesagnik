@@ -9,7 +9,8 @@ from openai import OpenAI
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 gemini_client = OpenAI(
     api_key=os.environ.get("GEMINI_API_KEY"),
-    base_url="https://generativelanguage.googleapis.com/v1beta/openai/"
+    base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
+    max_retries=1
 )
 
 # ---------------------------------------------------------------------------
