@@ -9,8 +9,7 @@
       "website": "https://gopesagnik.in/",
       "github": "https://github.com/GopeSagnik",
       "linkedin": "https://www.linkedin.com/in/gopesagnik/",
-      "contact": "https://gopesagnik.in/contact/",
-      "photography_portfolio": "https://gopesagnik.github.io/clicksbysagnik/"
+      "contact": "https://gopesagnik.in/contact/"
     }
   },
   "data_last_updated": "August 2026",
@@ -148,7 +147,62 @@
     }    
   ],
   "hobbies": [
-    "Photography",
+    {
+      "name": "Photography",
+      "portfolio_url": "https://gopesagnik.github.io/clicksbysagnik/",
+      "categories": {
+        "latest_clicks": [
+          "https://live.staticflickr.com/65535/55080099525_9b19646a96_b.jpg",
+          "https://live.staticflickr.com/65535/54872938729_b26b0a1b58_b.jpg",
+          "https://live.staticflickr.com/65535/54852844600_50a00f005c_b.jpg",
+          "https://live.staticflickr.com/65535/55079936208_ca6ae57412_b.jpg",
+          "https://live.staticflickr.com/65535/54852797513_e8cc3f2ae9_b.jpg",
+          "https://live.staticflickr.com/65535/54852797108_c1bd7181aa_b.jpg",
+          "https://live.staticflickr.com/65535/55079936428_1db65fb0e9_b.jpg",
+          "https://live.staticflickr.com/65535/54782663337_161d715997_b.jpg",
+          "https://live.staticflickr.com/65535/54733781556_33fcce38e1_b.jpg"
+        ],
+        "best_shots": [
+          "https://live.staticflickr.com/65535/54734016484_901259222b_b.jpg",
+          "https://live.staticflickr.com/65535/54734144105_94322532a9_b.jpg",
+          "https://live.staticflickr.com/65535/54734145275_200b43804a_b.jpg",
+          "https://live.staticflickr.com/65535/54734142435_b11992851b_b.jpg",
+          "https://live.staticflickr.com/65535/54734016809_9316500a28_b.jpg",
+          "https://live.staticflickr.com/65535/54732945687_daac5b002d_b.jpg",
+          "https://live.staticflickr.com/65535/54732949257_741f00e24d_b.jpg",
+          "https://live.staticflickr.com/65535/54733781691_5fb7414888_b.jpg",
+          "https://live.staticflickr.com/65535/54733993853_573ca5e18b_b.jpg",
+          "https://live.staticflickr.com/65535/54733778931_a1f961334d_b.jpg",
+          "https://live.staticflickr.com/65535/54734014539_30d1c0420a_b.jpg"
+        ],
+        "landscapes_clicks": [
+          "https://live.staticflickr.com/65535/55079936213_015d9ce7b9_b.jpg",
+          "https://live.staticflickr.com/65535/54734013304_db7e8faa95_b.jpg",
+          "https://live.staticflickr.com/65535/54733994368_ee7f55312e_b.jpg",
+          "https://live.staticflickr.com/65535/54733998068_4b7b362a0f_b.jpg",
+          "https://live.staticflickr.com/65535/54734015004_da1dbb1d5c_b.jpg",
+          "https://live.staticflickr.com/65535/54732951512_290ab24a05_b.jpg",
+          "https://live.staticflickr.com/65535/54733994218_4b0210faa0_b.jpg",
+          "https://live.staticflickr.com/65535/54734147205_f156230b5b_b.jpg",
+          "https://live.staticflickr.com/65535/54733996893_6926c77f79_b.jpg"
+        ],
+        "insects_shots": [
+          "https://live.staticflickr.com/65535/54734016494_eaa2f5abdd_b.jpg",
+          "https://live.staticflickr.com/65535/54732944677_bd26c7d9d9_b.jpg",
+          "https://live.staticflickr.com/65535/54733781556_33fcce38e1_b.jpg",
+          "https://live.staticflickr.com/65535/54733778886_f6a97fd9a3_b.jpg",
+          "https://live.staticflickr.com/65535/54732949357_114e437b62_b.jpg"
+        ],
+        "portraits_clicks": [
+          "https://live.staticflickr.com/65535/54733995308_b4d313e3d1_b.jpg",
+          "https://live.staticflickr.com/65535/54734000798_e0a9574893_b.jpg",
+          "https://live.staticflickr.com/65535/54733998643_ff04db30ba_b.jpg",
+          "https://live.staticflickr.com/65535/54734000448_5da4507807_b.jpg",
+          "https://live.staticflickr.com/65535/54734140725_05c302086b_b.jpg",
+          "https://live.staticflickr.com/65535/54732951487_8b23f02df0_b.jpg"
+        ]
+      }
+    },
     "Exploring New Techs",
     "Bike Riding"
   ]

@@ -196,9 +196,9 @@ class handler(BaseHTTPRequestHandler):
             - Never render a control that does nothing. No buttons that don't respond, no fake status readouts, no "loading" states that never resolve, no simulated terminals waiting for input that never processes anything. If you can't make it genuinely work, don't put it on the page.
 
             HARD RULES:
-            - FACTUAL INTEGRITY: use only what is in the profile data above. Never invent achievements, numbers, dates, quotes, employers, or events — not even inside a story or a game. A story must be built from true facts.
+            - FACTUAL INTEGRITY: use only what is in the profile data above. Never invent achievements, numbers, dates, quotes, employers, images or events — not even inside a story or a game. A story must be built from true facts. If required data is not present, mention the same and share contact URL to ask for details in a polite way.
             - Include a real way to reach him: https://gopesagnik.in/contact/ (with target="_blank", so it would open in new tab)
-            - If URL mentioned for any skills, projects, certification in the data, link it with proper word, with hyperlink nderline format with target="_blank", so it would open in a new tab.
+            - If URL mentioned for any skills, projects, certification in the data, link it with proper word, with hyperlink underline format with target="_blank", so it would open in a new tab.
             - Use Tailwind CSS utility classes. Only real Tailwind classes — either the built-in palette (i.e. bg-stone-800, text-emerald-400) or arbitrary values with actual hex codes (i.e. bg-[#2A404D]). Never invent palette names like bg-terracotta-500; they compile to nothing and render unstyled.
             - OUTPUT FORMAT: pure raw HTML suitable for insertion inside `<body>`. No `<!DOCTYPE html>`, `<html>`, `<head>`, or `<body>` tags. No markdown fences.
             - No in-page navigation: no navbar, no anchor links like #contact or #about.
