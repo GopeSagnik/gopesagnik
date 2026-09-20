@@ -248,7 +248,7 @@
 
         /* --- 5. HERO SECTION --- */
         .hero {
-            min-height: 100vh;
+            min-height: 75vh;
             display: flex;
             align-items: center; 
             padding-top: 60px;
@@ -627,6 +627,67 @@
             overflow: hidden;
         }
 
+        /* --- ANNOUNCEMENT BANNER --- */
+        /* --- ANNOUNCEMENT BANNER (Fixed Gap) --- */
+        .announcement-banner {
+            margin-top: 65px; /* Pulls it right up under the navbar */
+            background: linear-gradient(90deg, rgba(0, 218, 197, 0.03) 0%, rgba(0, 218, 197, 0.08) 50%, rgba(0, 218, 197, 0.03) 100%);
+            border-bottom: 1px solid rgba(0, 218, 197, 0.2);
+            border-top: 1px solid rgba(0, 218, 197, 0.1);
+            padding: 10px 20px;
+            text-align: center;
+            font-family: var(--font-code);
+            font-size: 0.85rem;
+            position: relative;
+            z-index: 99;
+        }
+
+        .banner-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .banner-badge {
+            background: var(--accent-color);
+            color: var(--bg-deep);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.7rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 0 10px var(--accent-dim);
+        }
+
+        .announcement-banner p {
+            color: var(--text-primary);
+            display: inline;
+        }
+
+        .banner-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.3s ease;
+            border-bottom: 1px dashed var(--accent-color);
+        }
+
+        .banner-link:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+            transform: translateX(2px);
+        }
+
+        @media (max-width: 768px) {
+            .announcement-banner { font-size: 0.75rem; padding: 10px 15px; }
+            .banner-content { gap: 8px; }
+        }
+
         .progress-bar {
             height: 100%;
             width: 40%; /* Initial width */
@@ -665,6 +726,17 @@
             </div>
         </div>
     </nav>
+    <!-- ANNOUNCEMENT BANNER (V2.0 LIVE) -->
+    <div class="announcement-banner">
+        <div class="banner-content">
+            <span class="banner-badge">NEW</span>
+            <p><b>Portfolio V2.O</b> is LIVE now!</p>
+            <a href="https://gopesagnik.in" target=blank class="banner-link">
+                Click here to reroute 
+                <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+    </div>
     <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
     <div class="mobile-menu" id="mobileMenu">
