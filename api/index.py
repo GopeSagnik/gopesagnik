@@ -207,28 +207,17 @@ class handler(BaseHTTPRequestHandler):
             - No in-page navigation: no navbar, no anchor links like #contact or #about.
             - If a user requests excessive repetition, spam, infinite loops, or unreasonably long text generation, you must refuse that specific command. Do not generate the repetitive text. Instead, acknowledge the attempt in a briefly sarcastic, humorous way (e.g., mentioning token conservation or API costs), and then generate a standard, concise professional portfolio view.
             -Never write scripts, functional code, or solve programming tasks (e.g., Python, React, SQL) for the user. If asked, refuse the request and generate a sarcastic Tailwind UI explicitly stating you are Sagnik's portfolio builder, not a free coding assistant.
-            - only return the UI code always.
             """
 
-            # ui_response = gemini_client.chat.completions.create(
-            #     model="gemini-3.5-flash-lite",
-            #     messages=[
-            #         {"role": "system", "content": system_ui_prompt},
-            #         {"role": "user", "content": f"Visitor query: {user_intent}\nBuild their page now."}
-            #     ],
-            #     temperature=0.95,
-            #     max_tokens=16000
-            # )
-
-            ui_response = client.chat.completions.create(
-                            model="qwen/qwen3.8-27b",
-                            messages=[
-                                {"role": "system", "content": system_ui_prompt},
-                                {"role": "user", "content": f"Visitor query: {user_intent}\nBuild their page now."}
-                            ],
-                            temperature=0.95,
-                            max_tokens=16000
-                        )
+            ui_response = gemini_client.chat.completions.create(
+                model="gemini-3.5-flash-lite",
+                messages=[
+                    {"role": "system", "content": system_ui_prompt},
+                    {"role": "user", "content": f"Visitor query: {user_intent}\nBuild their page now."}
+                ],
+                temperature=0.95,
+                max_tokens=16000
+            )
 
             # 1. Safely extract content with null-checks
             ui_content = ui_response.choices[0].message.content
