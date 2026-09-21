@@ -210,7 +210,7 @@ class handler(BaseHTTPRequestHandler):
             """
 
             ui_response = gemini_client.chat.completions.create(
-                model="gemini-3.5-flash",
+                model="gemini-3.5-flash-lite",
                 messages=[
                     {"role": "system", "content": system_ui_prompt},
                     {"role": "user", "content": f"Visitor query: {user_intent}\nBuild their page now."}
