@@ -118,7 +118,7 @@
       "description": "A productivity utility designed to streamline daily work tracking and simplify status reporting for the team",
       "tech_stack": ["HTML", "CSS", "FireBase"],
       "timeStamp":"November 2025",
-      "url": "https://perfomore-c0bbb.web.app/"
+      "url": "https://github.com/GopeSagnik/perfomore"
     },
     {
       "name": "Effortwall",
@@ -149,7 +149,7 @@
   "hobbies": [
     {
       "name": "Photography",
-      "portfolio_url": "https://gopesagnik.github.io/clicksbysagnik/",
+      "portfolio_url": "https://clicks.gopesagnik.in/",
       "categories": {
         "latest_clicks": [
           "https://live.staticflickr.com/65535/55080099525_9b19646a96_b.jpg",
